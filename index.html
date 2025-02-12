@@ -3,58 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Love Story</title>
+    <title>Will You Be My Valentine?</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #ffcccc;
             text-align: center;
-            background-color: #ffe6e6;
-            color: #d63384;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
         }
-        header {
-            background-color: #ff99cc;
+        .container {
+            margin-top: 50px;
+        }
+        .popup {
+            background: white;
             padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            display: inline-block;
+            position: relative;
         }
-        .section {
-            padding: 40px 20px;
-        }
-        .gallery img {
-            width: 200px;
-            height: auto;
+        .heart-btn {
+            border: none;
+            background: red;
+            color: white;
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 50%;
             margin: 10px;
-            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .heart-btn:hover {
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        }
+        .heart-container {
+            margin-top: 20px;
+        }
+        img {
+            width: 150px;
+            border-radius: 15px;
+            margin: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
-    <header>Our Love Story 💕</header>
-    
-    <div class="section">
-        <h2>About Us</h2>
-        <p>This is our special place where we celebrate our love and memories together.</p>
+    <div class="container">
+        <div class="popup">
+            <h2>Hiii Dugii</h2>
+            <p>Will you be my valentine??</p>
+            <img src="https://tenor.com/en-IN/view/có-biết-gì-đâu-gif-3821483482478003423" alt="Cute GIF">
+            <div class="heart-container">
+                <button class="heart-btn" onclick="sayYes()">Yes</button>
+                <button class="heart-btn" onclick="sayNo()">No</button>
+            </div>
+        </div>
     </div>
-    
-    <div class="section">
-        <h2>Our Story</h2>
-        <p>From the first time we met to today, every moment has been magical. Here's a timeline of our journey.</p>
-    </div>
-    
-    <div class="section gallery">
-        <h2>Our Memories</h2>
-        <p>Here are some of our favorite moments together.</p>
-        <img src="image1.jpg" alt="Memory 1">
-        <img src="image2.jpg" alt="Memory 2">
-        <img src="image3.jpg" alt="Memory 3">
-    </div>
-    
-    <div class="section">
-        <h2>Special Messages</h2>
-        <p>Every day with you is a blessing. I love you endlessly! ❤️</p>
-    </div>
-    
+
+    <script>
+        let noCount = 0;
+        function sayNo() {
+            noCount++;
+            if (noCount >= 5) {
+                document.body.innerHTML = `
+                    <div class="container">
+                        <div class="popup">
+                            <h2>Will kidnap you otherwise HMPH!</h2>
+                            <img src="https://tenor.com/en-IN/view/tonibear-bubu-duddu-panda-bear-gif-17553640072061844572" alt="Kidnap GIF">
+                        </div>
+                    </div>`;
+            }
+        }
+
+        function sayYes() {
+            document.body.innerHTML = `
+                <div class="container">
+                    <div class="popup">
+                        <h2>I Love you a lottttttt</h2>
+                        <p>My valentine for life!</p>
+                        <p>You make my heart go dhudhudhudhudhu</p>
+                        <img src="https://tenor.com/en-IN/view/robert-bri-cute-hug-gif-5869006706266344939" alt="Hug GIF">
+                    </div>
+                </div>`;
+        }
+    </script>
 </body>
 </html>
